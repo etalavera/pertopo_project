@@ -1,0 +1,125 @@
+{% extends "pertopo/proyectos/index.html" %}
+{% load i18n static %}
+
+{% block inicio_app %}
+  <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+   &rsaquo; <a href="{% url 'proyectos:index' %}">Proyectos</a>
+{% endblock %}
+
+{% block content_container %}
+  <div class="col-lg-12">
+    <div class="card card-info">
+      <div class="card-header">
+        <h3 class="card-title">Agregar nuevo proyecto</h3>
+      </div>
+      <!-- /.card-header -->
+      <!-- form start -->
+
+      <form class="form-vertical" method='POST'>{% csrf_token %}
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_name" class="control-label">Nombre del proyecto</label>
+                {{ form.project_name}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_leader" class="control-label">Lider de proyecto</label>
+                {{ form.project_leader }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_address" class="control-label">Lugar</label>
+                <!--<input type="text" class="form-control" id="name">-->
+                {{ form.project_address}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_city" class="control-label">Municipio</label>
+                <!--<input type="text" class="form-control" id="name" placeholder="Segundo nombre">-->
+                {{ form.project_city }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_seller" class="control-label">Quien hizo el trato</label>
+                <!--<input type="text" class="form-control" id="name">-->
+                {{ form.project_seller}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_machine_operator" class="control-label">Operador de máquina</label>
+                {{ form.project_machine_operator }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_machine" class="control-label">Máquina</label>
+                {{ form.project_machine }}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_custommer" class="control-label">Cliente</label>
+                {{ form.project_custommer }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_start_date" class="control-label">Fecha de inicio</label>
+                {{ form.project_start_date}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_estimate_meters" class="control-label">Metros estimados</label>
+                {{ form.project_estimate_meters}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_start_date" class="control-label">Precio por metro</label>
+                {{ form.project_price_per_meter}}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="id_project_observations" class="control-label">Observaciones</label>
+                {{ form.project_observations}}
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <input class="btn btn-success" type="submit" value="Guardar">
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <input class="btn btn-danger" type="button" value="Cancelar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock content_container %}

@@ -26,7 +26,7 @@ SECRET_KEY = '+p1q!@1iskfe+e7m8r#bloz*m_&h4_+v6=jbn2wr&2*1wsunjv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.proyectos',
+    'apis.apiConsultas',
+    'apis.apiFormularios',
 ]
 
 MIDDLEWARE = [
@@ -82,12 +84,8 @@ WSGI_APPLICATION = 'pertopo_app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pertopo_db',
-        'USER': 'pertopoadmin',
-        'PASSWORD': 'pertopoadmin1234',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

@@ -1,1 +1,96 @@
-id
+{% extends "admin/base.html" %}
+{% load i18n static %}
+{% block title %}Pertopo | Proyectos{% endblock %}
+
+{% block inicio_app %}
+  <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+   &rsaquo; <a href="{% url 'proyectos:index' %}">Proyectos</a>
+{% endblock %}
+
+
+{% block content_container %}
+<div class="row">
+  <div class="col-12">
+    <nav class="navbar navbar-expand bg-white navbar-light border-bottom">
+      <ul class="navbar-nav">
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="" class="nav-link">Proyecto: {{proyecto}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Bitácora de avances</h5>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-wrench"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" role="menu">
+              <a href="#" class="dropdown-item">Agregar tarea<a/a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <div class="row">
+          <table class="table table-bordered" id="id_logbook_table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Metros</th>
+                <th>Tareas</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-sm-3 col-6">
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-3 col-6">
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-3 col-6">
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-3 col-6">
+            <div class="description-block">
+              <h5 class="description-header"></h5>
+              <span class="description-text">METROS TOTALES</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+  </div>
+  <!-- /.col -->
+</div>
+<script src="{% static 'adminlte/plugins/jquery/jquery.min.js' %}"></script>
+<script>
+  $(document).ready(function () {
+    fillLogbookTable();
+  });
+</script>
+{% endblock content_container %}

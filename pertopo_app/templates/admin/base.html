@@ -54,40 +54,14 @@
         <div class="info">
           <p href="#" class="d-block text-white">{% block welcome-msg %}
               {% trans 'Welcome,' %}
-              <strong>{% firstof user.get_short_name user.get_username %}</strong>.
+              <!--<strong>{% firstof user.get_short_name user.get_username %}</strong>.-->
           {% endblock %}</p>
         </div>
       </div>
 
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-users"></i>
-              <p>
-                Usuarios
-                <i class="right fa fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fa fa-circle-o nav-icon"></i>
-                  <p style="width: auto;">
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-th"></i>
-              <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
+
         </ul>
       </nav>
     </div>
@@ -123,14 +97,8 @@
 
                 <div class="info-box-content">
                   <a href="proyectos/"><span class="info-box-text">Proyectos</span></a>
-                  <!--<span class="info-box-number">
-                    10
-                    <small>%</small>
-                  </span>-->
                 </div>
-                <!-- /.info-box-content -->
               </div>
-              <!-- /.info-box -->
             </div>
             <!-- /.col -->
             <div class="col-12 col-sm-6 col-md-3">
@@ -138,12 +106,9 @@
                 <span class="info-box-icon bg-danger elevation-1"><i class="fa fa-chart-line"></i></span>
 
                 <div class="info-box-content">
-                  <span class="info-box-text">Maquinaria</span>
-                  <!--<span class="info-box-number">41,410</span>-->
+                  <a href="#"><span class="info-box-text">Maquinaria</span></a>
                 </div>
-                <!-- /.info-box-content -->
               </div>
-              <!-- /.info-box -->
             </div>
             <!-- /.col -->
 
@@ -266,5 +231,10 @@
 <!-- AdminLTE App -->
 <script src="{% static 'adminlte/dist/js/adminlte.min.js' %}"></script>
 <script src="{% static 'adminlte/dist/js/actions.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'proyectos/js/tables.js' %}"></script>
+<script type="text/javascript" src="{% static 'proyectos/js/modales.js' %}"></script>
+<script type="text/javascript" src="{% static 'proyectos/js/forms_actions.js' %}"></script>
+<script type="text/javascript" src="{% static 'proyectos/js/btn_actions.js' %}"></script>
 </body>
 </html>

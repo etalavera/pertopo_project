@@ -19,5 +19,9 @@ from apps.proyectos.views import *
 
 urlpatterns = [
     path('', admin.site.urls),
-    path('proyectos/', include('apps.proyectos.urls'), name='proyectos'),
+    path('proyectos/', include(('apps.proyectos.urls', 'apps.proyectos'), namespace='proyectos')),
+    path('apiConsultas/', include(('apis.apiConsultas.urls', 'apis.apiConsultas'),
+        namespace='apiConsultas')),
+    path('apiFormularios/', include(('apis.apiFormularios.urls', 'apis.apiFormularios'),
+        namespace='apiFormularios')),
 ]
