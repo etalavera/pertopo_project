@@ -1,0 +1,386 @@
+{% load static %}
+<!DOCTYPE html>
+<!--
+Template Name: Overerts
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>Pertopo | Website</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+
+<div class="bgded overlay" style="background-image:url('{% static 'images/pertopo.fondo.jpg' %}');">
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="/"><img src="{% static 'images/logo.png'%}" style="width:200px; height:80px;"></a></h1>
+      </div>
+      {% block navbar-menu %}
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="#about">¿Quienes somos?</a></li>
+          <li><a class="drop" href="#servicios">Servicios</a>
+            <ul>
+              <li><a href="#analisis">Análisis de agua</a></li>
+              <li><a href="#construccion">Construcción de pozos profundos</a></li>
+              <li><a href="#aforo">Aforo de pozos profundos</a></li>
+              <li><a href="#equipamiento">Equipamento de pozos y sistema de riego</a></li>
+              <li><a href="#mantenimiento">Mantenimiento y rehabilitación</a></li>
+              <li><a href="#asesoria">Asesoría.</a></li>
+              <li><a href="#ServiciosExternos">Servicios Externos</a>
+                <ul>
+                  <li><a href="#ingenieria">Ingeniería</a></li>
+                  <li><a href="#tramites">Trámites</a></li>
+                  <li><a href="#puntoCorriente">Marcar punto corriente</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/bolsa/">Bolsa de trabajo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      {% endblock navbar-menu %}
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  {% block pageintro %}
+  <div id="pageintro" class="hoc clear">
+    <div class="flexslider basicslider">
+      <ul class="slides">
+        <li>
+          <article>
+            <p class="heading">PERTOPO S. de R.L. de C.V.</p>
+            <h2 class="heading">Ha sobresalido por su contundencia y su visión de crecer constantemente.</h2>
+            <p> Somos una empresa dedicada a la construcción de pozos profundos desde 1988.</p>
+            <footer>
+              <ul class="nospace inline pushright">
+                <li><a class="btn" href="#about">Conocenos</a></li>
+              </ul>
+            </footer>
+          </article>
+        </li>
+        <li>
+          <article>
+            <p class="heading">Nuestros servicios</p>
+            <h2 class="heading">Evolucionamos para adaptarnos a la industria </h2>
+            <p>Capacitación constante para mejorar el valor que le damos a nuestros servicios</p>
+            <footer>
+              <ul class="nospace inline pushright">
+                <li><a class="btn" href="#servicios">Conoce más</a></li>
+              </ul>
+            </footer>
+          </article>
+        </li>
+        <li>
+          <article>
+            <p class="heading">¿Te interesa alguno de nuestros servicios?</p>
+            <h2 class="heading">Nos interesa tu opinión</h2>
+            <p>Ponte en contacto con nosotros para saber más sobre nuestros servicios</p>
+            <footer>
+              <ul class="nospace inline pushright">
+                <li><a class="btn" href="#contacto">Contacto</a></li>
+              </ul>
+            </footer>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+  {% endblock pageintro %}
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+{% block about %}
+<div class="wrapper row4">
+  <section class="hoc container clear">
+    <div class="" id="about">
+      <br>
+      <div class="center btmspace-80">
+        <h2 class="heading">PERTOPO S. de R.L. de C.V.</h2>
+        <p class="">Somos una empresa dedicada a la construcción de pozos profundos,
+          así como a la fabricación, compra, venta, elaboración, producción, exportación de insumos,
+          comercialización de equipos y sistemas de tratamiento de agua superficial.</p>
+        <p class="">
+          También contamos con la prestación de servicios de ingeniería técnica, administrativo, financiero,
+          legal y económico que esté relacionado al sistema de tratamiento de agua.
+        </p>
+      </div>
+      <ul class="nospace group services">
+        <li class="one_third first">
+          <article><a href="#"><i class="fa fa-500px"></i></a>
+            <h6 class="heading">Misión</h6>
+            <p>Somos una empresa constructora dedicada a la perforación de pozos profundos para extraer agua y
+              con ella abastecer comunidades agrícolas del estado de Jalisco que no tienen acceso a este recurso,
+              brindándoles un servicio de calidad al mejor precio.</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fa fa-adjust"></i></a>
+            <h6 class="heading">Visión</h6>
+            <p>Ser la mejor compañía perforadora de Jalisco, que brinde al cliente el mejor servicio y
+              calidad de trabajo perforando los suelos, extrayendo el agua para llevarla a quien lo requiera,
+              con apoyo de nuevas tecnologías, posicionándonos de esta forma como la mejor opción.</p>
+          </article>
+        </li>
+        <li class="one_third">
+          <article><a href="#"><i class="fa fa-empire"></i></a>
+            <h6 class="heading">Valores</h6>
+            <p>Hemos identificado un conjunto de valores esenciales para nuestro negocio
+               y estamos convencidos que nos ayudarán a mejorar el servicio a nuestros clientes.</p>
+            <footer><a href="#">Conoce más &raquo;</a></footer>
+          </article>
+        </li>
+      </ul>
+      <!-- ################################################################################################ -->
+      <div class="clear"></div>
+    </div>
+  </section>
+</div>
+{% endblock about %}
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+{% block body %}
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-80" id="servicios">
+      <br>
+      <h2 class="heading nospace">Servicios</h2>
+      <p class="nospace">PERTOPO S. de R.L. de C.V. ofrece gran variedad de servicios, adaptándolos a las necesidaes de cada cliente.</p>
+    </div>
+    <ul class="nospace group">
+      <li class="one_half first btmspace-30" id="analisis">
+        <br>
+        <article class="group">
+          <div class="one_half first"><a href="#"><img
+              src="{% static 'images/services/analisis.de.agua.jpg' %}" style="width:320px; height:180px;"></a></div>
+          <div class="one_half">
+            <h3 class="heading font-x1">Análisis de agua.</h3>
+            <p>Se lleva a un laboratorio para analizar la calidad del agua, para ver que uso se le puede dar.</p>
+          </div>
+        </article>
+      </li>
+      <li class="one_half btmspace-30" id="aforo">
+        <br>
+        <article class="group">
+          <div class="one_half first"><a href="#">
+            <img src="{% static 'images/services/aforo.jpeg' %}" style="width:320px; height:180px;"></a></div>
+          <div class="one_half">
+            <h3 class="heading font-x1">Aforo</h3>
+            <p>Servicio de bombeo para checar el estado del pozo en cuanto aportación de agua,
+              para recomendar el equipo mas adecuado a instalar para extraer el agua del pozo</p>
+          </div>
+        </article>
+      </li>
+      <li class="one_half first btmspace-30" id="equipamiento">
+        <br>
+        <article class="group">
+          <div class="one_half first"><a href="#">
+            <img src="{% static 'images/services/equipamiento.pertopo.1.jpeg' %}" style="width:320px; height:180px;"></a></div>
+          <div class="one_half">
+            <h3 class="heading font-x1">Equipamiento de pozos</h3>
+            <ul>
+              <li>Venta.</li>
+              <li>Mano de obra de servicio sumergible.</li>
+              <li>Bombas.</li>
+              <li>Motores.</li>
+              <li>Cableado.</li>
+              <li>Tubería.</li>
+              <li>Divas solares.</li>
+            </ul>
+
+          </div>
+        </article>
+      </li>
+      <li class="one_half btmspace-30" id="construccion">
+        <br>
+        <article class="group">
+          <div class="one_half first"><a href="#">
+            <img src="{% static 'images/services/construccion.tubos.jpeg' %}" style="width:320px; height:180px;"></a></div>
+          <div class="one_half">
+            <h3 class="heading font-x1">Construcción de pozos profundos.</h3>
+            <p>Desde el inicio hasta el final de la obra se da avance y se va recopilando información de los materiales,
+              durezas, aportaciones y expediente fotográfico de las actividades realizadas.</p>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <ul class="nospace group">
+      <li class="one_half first btmspace-20" id="asesoria">
+        <br>
+          <div class="one_half first"><a href="#">
+            <img src="{% static 'images/services/asesoria.1.jpg' %}" style="width:320px; height:180px;"></a></div>
+          <div class="one_half">
+            <h3 class="heading font-x1">Asesoría.</h3>
+            <p>Revisión y asesoría para equipos relacionados al sistema de tratamiento de aguas.</p>
+          </div>
+      </li>
+      <li class="one_half btmspace-20" id="mantenimiento">
+        <br>
+          <div class="one_half first"><a href="#">
+            <img src="{% static 'images/services/cepillado.jpg' %}" style="width:320px; height:180px;"></a></div>
+          <div class="one_half">
+            <h3 class="heading font-x1">Mantenimiento.</h3>
+            <p>Se realiza una visita en la ubicación del pozo, se hace chequeo de bomba, tubería, niveles del agua y
+              se realiza un análisis del estado del pozo para presupuestar el trabajo para rehabilitarlo o limpiarlo.</p>
+          </div>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+{% endblock body %}
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+{% block servicios_externos %}
+<div class="wrapper bgded overlay" style="background-image:url('{% static 'images/services/water.gif' %}');">
+  <section class="hoc container clear">
+    <!-- ################################################################################################ -->
+    <div class="btmspace-80 center" id="ServiciosExternos">
+      <br>
+      <h2 class="heading nospace">Servicios subcontratados</h2>
+      <p>También ofrecemos servicios por externos.</p>
+    </div>
+    <ul class="nospace group">
+      <li class="one_third first" id="ingenieria">
+        <br>
+          <div class="excerpttxt">
+            <h6 class="heading font-x1">Servicios de ingeniería.</h6>
+          </div>
+      </li>
+      <li class="one_third" id="registroElectrico">
+        <br>
+          <div class="excerpttxt">
+            <h6 class="heading font-x1">Registro eléctrico de pozos.</h6>
+          </div>
+      </li>
+      <li class="one_third" id="tramites">
+        <br>
+          <div class="excerpttxt">
+            <h6 class="heading font-x1">Trámites, seguimiento y permisos con la CONAGUA.</h6>
+          </div>
+      </li>
+      <!--<li class="one_quarter" id="puntoCorriente">
+        <br>
+          <div class="excerpttxt">
+            <h6 class="heading font-x1">Contacto para marcar el punto de corriente donde se construirá el pozo.</h6>
+          </div>
+      </li>-->
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+{% endblock servicios_externos %}
+<div class="wrapper row4" id="contacto">
+  <footer id="footer" class="hoc clear">
+    <div class="one_third first" >
+      <h6 class="heading">Dirección de contacto</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          Juarez Poniente #29, Santa Cruz del valle, Tlajomulco de Zuñiga.
+          </address>
+          <address>
+            C.P.: 45655
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> (33) 3689-5667</li>
+        <li><i class="fa fa-envelope-o"></i> contacto@pertopo.com.mx</li>
+      </ul>
+    </div>
+
+    <div class="one_third">
+      <h6 class="heading">Encuentranos en google maps</h6>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3735.9525323383964!2d-103.33897768554304!3d20.549122986260127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4d6aa30f3597%3A0x3091fa6e3e3202be!2sPERTOPO+S+DE+RL+DE+CV!5e0!3m2!1ses!2smx!4v1529900720872"
+        width="300"
+        height="250"
+        frameborder="0"
+        style="border:0"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Dejanos un mensaje</h6>
+      <form>
+        <div class="row">
+          <label for="id_contact_name">Nombre Completo</label>
+          <input type="text" class="form-group">
+        </div>
+        <div class="row">
+          <label for="id_contact_name">Telefono de contacto</label>
+          <input type="text" onkeyup="onlyNumbers(this.value, this)" class="form-group" max="10" min="10">
+        </div>
+        <div class="row">
+          <label for="id_contact_name">Correo electrónico</label>
+          <input type="email" class="form-group">
+        </div>
+        <div class="row">
+          <label for="id_contact_name">Mensaje</label>
+          <textarea class="form-group"></textarea>
+        </div>
+        <br>
+        <div class="row">
+          <input type="button" class="btn btn-success" value="Enviar">
+        </div>
+      </form>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper quicklinks">
+  <nav class="hoc clear">
+    <!-- ################################################################################################ -->
+    <ul class="nospace">
+      <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - <a href="#">PERTOPO S.R. de C.V.</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
